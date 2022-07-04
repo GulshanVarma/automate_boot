@@ -1,0 +1,1 @@
+powershell.exe -windowstyle hidden -file C:\Users\shu\Desktop\automate_startup\automate-boot\automata.ps1 >> ./automata_logs.txt
