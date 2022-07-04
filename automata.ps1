@@ -6,7 +6,7 @@ $sw = new-object System.Diagnostics.Stopwatch
 $sw.Start()
 Write-Host "stopwatch started for 40 minutes"
 
-while ($sw.elapsed.Milliseconds –lt 20) {$null}; 
+while ($sw.elapsed.Minutes –lt 40) {$null}; 
 & 'C:\Program Files\VideoLAN\VLC\vlc.exe' --qt-start-minimized --play-and-exit --qt-notification=0 "C:\Users\shu\Downloads\Start_alarm.mp3"
 while ($sw.elapsed.Milliseconds –lt 1) {$null}; 
 [reflection.assembly]::loadwithpartialname('System.Windows.Forms')
