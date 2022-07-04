@@ -1,7 +1,10 @@
-﻿[System.Reflection.Assembly]::LoadWithPartialName(“System.Diagnostics”)
+﻿Write-Host " -------------------------------------- Start automata.ps1 ------------------------------------------------------"
+Write-Host $(Get-Date)
+[System.Reflection.Assembly]::LoadWithPartialName(“System.Diagnostics”)
 
 $sw = new-object System.Diagnostics.Stopwatch
 $sw.Start()
+Write-Host "stopwatch started for 40 minutes"
 
 while ($sw.elapsed.Milliseconds –lt 20) {$null}; 
 & 'C:\Program Files\VideoLAN\VLC\vlc.exe' --qt-start-minimized --play-and-exit --qt-notification=0 "C:\Users\shu\Downloads\Start_alarm.mp3"
@@ -21,8 +24,11 @@ $notify.showballoontip(10,'WARNING','Timer started 40 Minutes ! Enjoy !!',[syste
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-while ($sw.elapsed.Seconds –lt 15) {$null}; 
+Write-Host "Programs started successfully"
+while ($sw.elapsed.Seconds –lt 10) {$null}; 
 $notify.showballoontip(10,'WARNING','You did **Great**, now Enjoy',[system.windows.forms.tooltipicon]::None)
 & 'C:\Program Files\VideoLAN\VLC\vlc.exe' --qt-start-minimized --play-and-exit --qt-notification=0 "C:\Users\shu\Downloads\Start_alarm.mp3"
 
 $sw.Stop()
+Write-Host "stopwatch finished for 40 minutes"
+Write-Host " -------------------------------------- SUCCESS ------------------------------------------------------"
