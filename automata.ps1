@@ -19,8 +19,8 @@ $notify.showballoontip(10,'WARNING','Timer started 40 Minutes ! Enjoy !!',[syste
 #---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-#& start devenv
-#Start-Process -FilePath "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\Ssms.exe"
+& start devenv
+Start-Process -FilePath "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\Ssms.exe"
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------
 
